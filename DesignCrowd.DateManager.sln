@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5CA9521F-1FBB-4E5D-8A4B-ADD61ECD2174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{0F3842FC-DB1E-4AF5-B222-D5F953406270}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{16E8243A-A5E2-4A06-BDFB-281E08097CB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1B496372-F560-4257-AC70-970CE410B754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCrowd.DateManager.Contracts.Api", "src\Contracts\DesignCrowd.DateManager.Contracts.Api\DesignCrowd.DateManager.Contracts.Api.csproj", "{AAAF210E-EBAD-43CC-81FA-DCE6F467CA6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCrowd.DateManager.Contracts.Shared.Cqrs", "src\Contracts\DesignCrowd.DateManager.Contracts.Shared.Cqrs\DesignCrowd.DateManager.Contracts.Shared.Cqrs.csproj", "{C7A66637-C708-40B4-B77F-BF2D9FA6A75E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCrowd.DateManager.Domain", "src\Core\DesignCrowd.DateManager.Domain\DesignCrowd.DateManager.Domain.csproj", "{C331F48D-7E18-43DF-99F5-5A16C520BE5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCrowd.DateManager.Infrastructure", "src\Core\DesignCrowd.DateManager.Infrastructure\DesignCrowd.DateManager.Infrastructure.csproj", "{460FECD5-A920-43E8-9AC8-2B9A2D10E9F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCrowd.DateManager.Console", "src\Presentation\DesignCrowd.DateManager.Console\DesignCrowd.DateManager.Console.csproj", "{0D239DB0-B210-4527-AE58-B8CB43C0727F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignCrowd.DateManager.Tests", "src\Tests\DesignCrowd.DateManager.Tests\DesignCrowd.DateManager.Tests.csproj", "{D6C45DC8-8EF8-4CD8-BE53-56690417270C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAAF210E-EBAD-43CC-81FA-DCE6F467CA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAF210E-EBAD-43CC-81FA-DCE6F467CA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAF210E-EBAD-43CC-81FA-DCE6F467CA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAF210E-EBAD-43CC-81FA-DCE6F467CA6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A66637-C708-40B4-B77F-BF2D9FA6A75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A66637-C708-40B4-B77F-BF2D9FA6A75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A66637-C708-40B4-B77F-BF2D9FA6A75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A66637-C708-40B4-B77F-BF2D9FA6A75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C331F48D-7E18-43DF-99F5-5A16C520BE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C331F48D-7E18-43DF-99F5-5A16C520BE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C331F48D-7E18-43DF-99F5-5A16C520BE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C331F48D-7E18-43DF-99F5-5A16C520BE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460FECD5-A920-43E8-9AC8-2B9A2D10E9F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460FECD5-A920-43E8-9AC8-2B9A2D10E9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460FECD5-A920-43E8-9AC8-2B9A2D10E9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460FECD5-A920-43E8-9AC8-2B9A2D10E9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D239DB0-B210-4527-AE58-B8CB43C0727F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D239DB0-B210-4527-AE58-B8CB43C0727F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D239DB0-B210-4527-AE58-B8CB43C0727F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D239DB0-B210-4527-AE58-B8CB43C0727F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C45DC8-8EF8-4CD8-BE53-56690417270C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C45DC8-8EF8-4CD8-BE53-56690417270C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C45DC8-8EF8-4CD8-BE53-56690417270C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C45DC8-8EF8-4CD8-BE53-56690417270C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AAAF210E-EBAD-43CC-81FA-DCE6F467CA6B} = {0F3842FC-DB1E-4AF5-B222-D5F953406270}
+		{C7A66637-C708-40B4-B77F-BF2D9FA6A75E} = {0F3842FC-DB1E-4AF5-B222-D5F953406270}
+		{C331F48D-7E18-43DF-99F5-5A16C520BE5E} = {16E8243A-A5E2-4A06-BDFB-281E08097CB9}
+		{460FECD5-A920-43E8-9AC8-2B9A2D10E9F4} = {16E8243A-A5E2-4A06-BDFB-281E08097CB9}
+		{0D239DB0-B210-4527-AE58-B8CB43C0727F} = {1B496372-F560-4257-AC70-970CE410B754}
+		{D6C45DC8-8EF8-4CD8-BE53-56690417270C} = {5CA9521F-1FBB-4E5D-8A4B-ADD61ECD2174}
+	EndGlobalSection
+EndGlobal
