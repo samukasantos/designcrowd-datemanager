@@ -95,13 +95,12 @@ dotnet test
 ```
 
 ### Test Coverage
-- Handlers for `WeekdaysBetweenDatesQuery` and `BusinessDaysBetweenDatesQuery`.
-- `DateRangeService` methods.
+- BusinessDaysBetweenTwoDatesTests, PublicHolidayServiceTests and WeekdaysBetweenTwoDatesTests.
 - Mocked `IPublicHolidayService` for various scenarios.
 
 ## Extending the Application
 1. **Add New Holiday Rules**:
-   - Implement a new class inheriting from `PublicHolidayRule`.
+   - Create a new class implementing from `IPublicHolidayCheck` interface.
    - Register the rule in the database or configuration.
 2. **Enhance Queries**:
    - Create new query classes as needed.
@@ -115,7 +114,3 @@ Contributions are welcome! Follow these steps:
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-For any questions or issues, feel free to contact us or open an issue on GitHub.
