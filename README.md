@@ -8,33 +8,35 @@ The **Business Day Counter Application** calculates the number of weekdays and b
 The solution is structured as follows:
 
 - **Contracts Layer**
+- This layer defines the interfaces, data models, and query/command contracts for communication between layers.
   - **DesignCrowd.DateManager.Contracts.Api**:
-    - Models:
-      - `FixedHoliday`
-      - `IPublicHolidayCheck`
-      - `OccurrenceHoliday`
-      - `WeekendHoliday`
+    - Models: Define the structure for holiday rules and queries:
+      - `FixedHoliday` Represents holidays on fixed calendar dates.
+      - `IPublicHolidayCheck` Interface for checking public holidays.
+      - `OccurrenceHoliday` Represents holidays based on nth occurrence of a weekday in a month.
+      - `WeekendHoliday` Represents holidays adjusted for weekends.
     - Queries:
-      - `GetBusinessDaysBetweenDatesQuery`
-      - `GetWeekdaysBetweenDatesQuery`
+      - `GetBusinessDaysBetweenDatesQuery` Retrieves business days between two dates.
+      - `GetWeekdaysBetweenDatesQuery` Retrieves weekdays between two dates.
   - **DesignCrowd.DateManager.Contracts.Shared.Cqrs**:
     - Interfaces:
-      - `IQuery`
+      - `IQuery` interface for all query operations.
 
 - **Core Layer**
+- This layer contains the domain entities, enums, and infrastructure for core business logic.
   - **DesignCrowd.DateManager.Domain**:
     - Entities:
-      - `PublicHoliday`
+      - `PublicHoliday` Represents a public holiday with relevant metadata.
     - Enums:
-      - `PublicHolidayType`
+      - `PublicHolidayType` Defines holiday types (e.g., FixedDate, Occurrence).
   - **DesignCrowd.DateManager.Infrastructure**:
     - Services:
-      - `BusinessDayCounterService`
-      - `PublicHolidayService`
-      - `SqlDbContext`
+      - `BusinessDayCounterService` Contains logic to calculate weekdays and business days.
+      - `PublicHolidayService` Manages holiday rules and determines applicable holidays.
+      - `SqlDbContext` EF Core database context for managing holiday data.
     - Abstractions:
-      - `IBusinessDayCounterService`
-      - `IPublicHolidayService`
+      - `IBusinessDayCounterService` Interface for day counting services.
+      - `IPublicHolidayService` Interface for public holiday services.
 
 - **Presentation Layer**
   - **DesignCrowd.DateManager.Console**:
@@ -69,8 +71,8 @@ The solution is structured as follows:
 ### Running the Application
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/business-day-counter.git
-   cd business-day-counter
+   git clone https://github.com/your-repo/designcrowd-datemanager.git
+   cd designcrowd-datemanager
    ```
 2. Build the solution:
    ```bash
@@ -80,23 +82,10 @@ The solution is structured as follows:
    ```bash
    dotnet run --project Presentation
    ```
-
-### Example Input/Output
-- Input:
-  ```
-  Enter start date (YYYY-MM-DD): 2024-12-20
-  Enter end date (YYYY-MM-DD): 2024-12-27
-  ```
-- Output:
-  ```
-  Weekdays: 3
-  Business Days: 2
-  ```
-
 ## Public Holiday Configuration
-Public holidays are managed in the database (or an alternative configuration). To add rules:
-1. Extend the `PublicHolidayRule` base class if needed.
-2. Seed rules using EF Core or manually.
+Public holidays are managed in the database (or an alternative configuration like 3rd party APIs or json file). To add:
+1. Implement the `IPublicHolidayCheck` interface if needed.
+2. Seed public holidays using EF Core or manually.
 
 ## Unit Tests
 ### Run Tests
